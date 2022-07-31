@@ -1,5 +1,7 @@
 defmodule Hello.World do
-  @moduledoc false
+  @moduledoc """
+  Hello world
+  """
 
   @doc """
   Greet world
