@@ -2,11 +2,11 @@
 version: '3'
 tasks:
   default: mix test
-  
+
   pub:
     desc: publish package
     cmds:
-    - mix hex.publish
+    - mix hex.publish --yes
     
   gen-docs:
     desc: generate docs by help ex_doc
