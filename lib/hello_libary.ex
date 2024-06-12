@@ -1,4 +1,4 @@
-defmodule Hello do
+defmodule HelloLibary do
   @moduledoc """
   Documentation for `Hello`.
   """
@@ -8,7 +8,7 @@ defmodule Hello do
 
   ## Examples
 
-      iex> Hello.hello()
+      iex> HelloLibary.hello()
       :world
 
   """

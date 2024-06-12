@@ -1,20 +1,11 @@
 # https://taskfile.dev
-version: '3'
+version: "3"
 tasks:
   default: mix test
 
   pub:
     desc: publish package
     cmds:
-    - mix hex.publish --yes
-    
-  gen-docs:
-    desc: generate docs by help ex_doc
-    cmds:
-    - mix docs
+      - mix hex.publish --yes
 
-  setup:
-    desc: setup base code
-    cmds:
-    # - mkdir hello-elixir-libary && cd hello-elixir-libary
-    - mix new . --module Hello --app hello_libary --sup
+  mk-lib: mix new . --module HelloLibary --app hello_libary --sup

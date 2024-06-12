@@ -4,12 +4,12 @@ defmodule Hello.MixProject do
   def project do
     [
       app: :hello_libary,
-      version: "0.1.3",
-      elixir: "~> 1.13",
+      version: "0.1.5",
+      elixir: "~> 1.16",
       start_permanent: Mix.env() == :prod,
-      description: description(),
-      package: package(),
-      deps: deps()
+      deps: deps(),
+      description: "hello elixir libary",
+      package: package()
     ]
   end
 
@@ -17,34 +17,29 @@ defmodule Hello.MixProject do
   def application do
     [
       extra_applications: [:logger],
-      mod: {Hello.Application, []}
-    ]
-  end
-
-  defp description do
-    """
-    Hello elixir libary.
-    """
-  end
-
-  defp package do
-    [
-      files: ["lib", "mix.exs", "README.md"],
-      maintainers: ["Cao7113"],
-      licenses: ["Apache 2.0"],
-      links: %{
-        "GitHub" => "https://github.com/cao7113/hello-elixir-libary",
-        "Docs" => "https://hexdocs.pm/hello_libary/"
-      }
+      mod: {HelloLibary.Application, []}
     ]
   end
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
       {:ex_doc, "~> 0.11", only: :dev}
+    ]
+  end
+
+  # hex package metadata as https://hex.pm/docs/publish
+  def package do
+    [
+      # must
+      licenses: ["Apache-2.0"],
+      maintainers: ["cao7113"],
+      links: %{
+        "GitHub" => "https://github.com/cao7113/hello-libary",
+        "Docs" => "https://hexdocs.pm/hello_libary/"
+      }
+      # optional
+      # files: []
     ]
   end
 end
