@@ -6,6 +6,8 @@ tasks:
   pub:
     desc: publish package
     cmds:
-      - mix hex.publish --yes
+      - mix hex.publish --yes --replace
+  # mix hex.publish package
+  pub-docs: mix hex.publish docs --yes
 
   mk-lib: mix new . --module HelloLibary --app hello_libary --sup
