@@ -6,13 +6,16 @@ defmodule Hello.MixProject do
       app: :hello_libary,
       version: "0.1.6",
       elixir: "~> 1.16",
+      compilers: [:yecc, :leex] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       name: "HelloLibary",
       description: "hello elixir libary",
       source_url: "https://github.com/cao7113/hello-libary",
       homepage_url: "https://github.com/cao7113/hello-libary",
-      package: package()
+      package: package(),
+      # dialyzer
+      dialyzer: [plt_add_apps: [:mix]]
     ]
   end
 
@@ -28,7 +31,9 @@ defmodule Hello.MixProject do
   defp deps do
     [
       # https://hexdocs.pm/ex_doc/readme.html
-      {:ex_doc, "~> 0.31", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.34", only: :dev, runtime: false},
+      # {:earmark, "~> 1.4", only: :dev, runtime: false},
+      {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false}
     ]
   end
 
@@ -43,6 +48,7 @@ defmodule Hello.MixProject do
         "GitHub" => "https://github.com/cao7113/hello-libary",
         "Docs" => "https://hexdocs.pm/hello_libary/"
       }
+      # files: ["lib", "mix.exs", "README.md"],
     ]
   end
 end

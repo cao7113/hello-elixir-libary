@@ -10,4 +10,7 @@ tasks:
   # mix hex.publish package
   pub-docs: mix hex.publish docs --yes
 
+  deps-get: "mix do deps.get, deps.compile"
+  type-check: mix dialyzer
+
   mk-lib: mix new . --module HelloLibary --app hello_libary --sup

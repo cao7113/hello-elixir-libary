@@ -1,6 +1,6 @@
 # Hello Elixir Libary
 
-Try libary code and publish to hex.pm as https://hex.pm/docs/publish.
+Try [libary code](https://hexdocs.pm/elixir/1.16.3/library-guidelines.html) and publish to [hex.pm](https://hex.pm/docs/publish).
 
 ## Installation
 
@@ -10,7 +10,7 @@ by adding `hello_libary` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:hello_libary, "~> 0.1.5"}
+    {:hello_libary, "~> 0.1.6"}
   ]
 end
 ```
